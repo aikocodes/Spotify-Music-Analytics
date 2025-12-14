@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Music Analytics Dashboard</title>
+    
+    <!-- Import D3.js Library (v7) for data visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Link to custom stylesheet for styling -->
+    <link rel="stylesheet" href="/static/styles.css">
+    
+</head>
+<body>
+    <!-- 
+        Header Section: 
+        - Display the title "Spotify Music Analytics Dashboard" 
+        - Include the Spotify logo
+    -->
+    <header class="dashboard-header">
+        <h1>Spotify Music Analytics Dashboard</h1>
+        <div class="logo-container">
+            <img src="/static/Spotify_logo.svg.png" alt="Spotify Logo" class="spotify-logo">
+        </div>
+    </header>
+    
+    <main>
+        <!-- 
+            Scatter Plot Section:
+            - Visualize the relationship between Spotify Streams and Playlist Reach
+            - The D3.js scatter plot will be rendered inside the "scatterPlotContainer" div
+        -->
+        <section id="scatterPlot">
+            <h2>Streams vs Playlist Reach</h2>
+            <div id="scatterPlotContainer"></div>
+        </section>
+
+        <!-- 
+            Top 10 Artists Section:
+            - Display the top 10 artists ranked by Streams or Playlist Reach
+            - The D3.js bar chart will be rendered inside the "topArtistsContainer" div
+        -->
+        <section id="topArtists">
+            <h2>Top 10 Artists</h2>
+            <div id="topArtistsContainer"></div>
+        </section>
+
+        <!-- 
+            Platform Comparison Section:
+            - Compare streaming data across Spotify, YouTube, and TikTok
+            - The D3.js comparison chart will be rendered inside the "platformComparisonContainer" div
+        -->
+        <section id="platformComparison">
+            <h2>Platform Comparison</h2>
+            <div id="platformComparisonContainer"></div>
+        </section>
+    </main>
+
+    <!-- Import custom JavaScript file for data processing and visualization -->
+    <script src="static/app.js"></script>
+</body>
+</html>
